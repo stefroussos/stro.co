@@ -4,7 +4,12 @@ import Layout from 'components/Layout'
 
 
 const AboutPage = () => (
-  <Layout title="About" description="Bio" image="/images/about.jpg">
+  <Layout 
+    title="About" 
+    subtitle="Bio"
+    description="I’m a designer and developer passionate about technology, startups, healthcare and environmentalism." 
+    image="/images/about.jpg"
+  >
     <section>
       <div className="about-container">
         <Image 

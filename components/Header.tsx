@@ -3,7 +3,11 @@ import { useRouter } from 'next/router'
 import css from 'styled-jsx/css'
 
 
-const Header = ({ description }: any) => {
+interface Props {
+  subtitle: string
+}
+
+const Header = ({ subtitle }: Props) => {
   const { pathname } = useRouter()
 
   function isPageActive(page: string) {
@@ -18,7 +22,7 @@ const Header = ({ description }: any) => {
     <header>
       <div>
         <div className="title">Stef Roussos</div>
-        <div className="description">{description}</div>
+        <div className="subtitle">{subtitle}</div>
       </div>
       <nav>
         <Link href="/">
@@ -51,7 +55,7 @@ const styles = css`
     padding-bottom: 8px;
   }
 
-  .description {
+  .subtitle {
     opacity: 0.7;
   }
 
@@ -90,7 +94,7 @@ const styles = css`
       padding: 2px 20px 5px 20px;
     }
 
-    .description {
+    .subtitle {
       font-size: 14px;
       padding: 0 20px;
     }

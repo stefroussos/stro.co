@@ -1,3 +1,7 @@
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
+
 interface MediaProps {
   id: string
   medium: string | Array<string>
@@ -7,17 +11,25 @@ const Media = ({ id, medium }: MediaProps) => {
   // Render 2x grid of images
   if (Array.isArray(medium)) {
     return (
-      <div>
-        <img
-          style={{ width: '48%', marginRight: '4%' }}
-          src={`/images/${id}/${medium[0]}`}
-          alt={medium[0]}
-        />
-         <img
-          style={{ width: '48%' }}
-          src={`/images/${id}/${medium[1]}`}
-          alt={medium[1]}
-        />
+      <div style={{ display: 'flex' }}>
+        <div style={{ width: '48%', marginRight: '4%' }}>
+          <Zoom>
+            <img
+              style={{ width: '100%'}}
+              src={`/images/${id}/${medium[0]}`}
+              alt={medium[0]}
+            />
+          </Zoom>
+        </div>
+        <div style={{ width: '48%' }}>
+          <Zoom>
+            <img
+              style={{ width: '100%'}}
+              src={`/images/${id}/${medium[1]}`}
+              alt={medium[1]}
+            />
+          </Zoom>
+        </div>
       </div>
     )
   }
@@ -40,13 +52,13 @@ const Media = ({ id, medium }: MediaProps) => {
   }
   // Render full size image
   return  (
-    <div>
+    <Zoom>
       <img
         style={{ width: '100%', marginBottom: '10px' }}
         src={`/images/${id}/${medium}`} 
         alt={medium}
       />
-    </div>
+    </Zoom>
   )
 }
 

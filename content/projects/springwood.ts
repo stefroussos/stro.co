@@ -15,6 +15,11 @@ const springwood: ProjectModel = {
       media: ["vimeo/376173005"]
     },
     {
+      title: "Springwood Beta UI",
+      description: "",
+      media: ["vimeo/476607758"]
+    },
+    {
       title: "Value Propositions",
       description: "",
       media: ["value_propositions.jpg"]

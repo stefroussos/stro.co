@@ -1,12 +1,13 @@
 import { useEffect } from 'react'
 import css from 'styled-jsx/css'
+import { ProjectModel } from 'utils/models'
 import CardPreview from './CardPreview'
 import CardExpanded from './CardExpanded'
 
 
 interface Props {
   active: boolean
-  project: any
+  project: ProjectModel
   onClick: Function
 }
 

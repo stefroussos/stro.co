@@ -9,15 +9,17 @@ import styles from 'styles/global'
 interface Props {
   children?: ReactNode
   title?: string
+  subtitle?: string
   description?: string
   image?: string
 }
 
-const Layout = ({ children, title, description, image }: Props) => {
+const Layout = ({ children, title, subtitle, description, image }: Props) => {
   const path = useRouter().asPath
   const defaultTitle = 'Stef Roussos'
   const defaultDescription = 'A collection of my design, technology and film projects.'
   const defaultURL = 'https://stro.co'
+  const defaultSubtitle = subtitle === undefined ? defaultDescription : subtitle
   const defaultImage = defaultURL + '/images/springwood/hero.jpg'
   const OGTitle = title === undefined ? defaultTitle : `${defaultTitle} | ${title}`
   const OGDescription = description === undefined ? defaultDescription : description
@@ -59,7 +61,7 @@ const Layout = ({ children, title, description, image }: Props) => {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       </Head>
       <main>
-        <Header description={OGDescription} />
+        <Header subtitle={defaultSubtitle} />
         {children}
         <Footer />
       </main>

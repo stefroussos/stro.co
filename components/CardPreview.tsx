@@ -7,7 +7,7 @@ import { ProjectModel } from 'utils/models'
 interface Props {
   active: boolean
   project: ProjectModel
-  onClick: any
+  onClick: Function
 }
 
 const CardPreview = ({ active, project, onClick }: Props) => {

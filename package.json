@@ -1,5 +1,5 @@
 {
-  "name": "with-typescript",
+  "name": "stro",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
@@ -8,9 +8,13 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "next": "latest",
+    "@types/styled-jsx": "^2.2.8",
+    "framer-motion": "^2.9.4",
+    "next": "^10.0.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.11.0",
+    "react-markdown": "^5.0.2"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",

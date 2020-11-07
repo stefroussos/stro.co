@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /src/
+Disallow: /cgi-bin/
+Disallow: /~zohaib/
+Disallow: /temp/

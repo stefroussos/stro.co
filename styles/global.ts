@@ -98,7 +98,6 @@ const styles = css.global`
       font-size: 14px;
     }
   }
-
 `
 
 export default styles

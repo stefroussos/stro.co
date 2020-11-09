@@ -14,7 +14,7 @@ export const ScrollFAB = ({ onCloseClick }: Props) => {
   const pathLength = useSpring(scrollPosition, { stiffness: 400, damping: 90 })
 
   useEffect(() => {
-    function handleScroll() {
+    function handleScrollState() {
       try {
         const position = window.scrollY
         const card = document.querySelector('.card-expanded') as HTMLElement
@@ -30,38 +30,36 @@ export const ScrollFAB = ({ onCloseClick }: Props) => {
       }
     }
     
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScrollState, { passive: true })
+    return () => window.removeEventListener('scroll', handleScrollState)
   }, [scrollYProgress])
 
   return (
-    <>
-      <div className="fab-container" onClick={() => onCloseClick('')}>
-        <MdClose 
-          size="20"
-          style={{ position: 'absolute', left: 15, top: 15, color: '#FFF' }}  
+    <div className="fab-container" onClick={() => onCloseClick('')}>
+      <MdClose 
+        size="20"
+        style={{ position: 'absolute', left: 15, top: 15, color: '#FFF' }}  
+      />
+      <svg viewBox="0 0 60 60">
+        <motion.path
+          fill="none"
+          strokeWidth="3"
+          stroke="white"
+          strokeDasharray="0 1"
+          d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
+          style={{
+            position: 'absolute',
+            left: 10,
+            pathLength,
+            rotate: 90,
+            translateX: 10,
+            translateY: 10,
+            scaleX: -1
+          }}
         />
-        <svg viewBox="0 0 60 60">
-          <motion.path
-            fill="none"
-            strokeWidth="3"
-            stroke="white"
-            strokeDasharray="0 1"
-            d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
-            style={{
-              position: 'absolute',
-              left: 10,
-              pathLength,
-              rotate: 90,
-              translateX: 10,
-              translateY: 10,
-              scaleX: -1
-            }}
-          />
-        </svg>
-      </div>
+      </svg>
       <style jsx>{styles}</style> 
-    </>
+    </div>
   )
 }
 

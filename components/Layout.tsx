@@ -29,6 +29,7 @@ const Layout = ({ children, title, subtitle, description, image }: Props) => {
   return (
     <>
       <Head>
+        <html lang="en" />
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78363147-1" />
         <script

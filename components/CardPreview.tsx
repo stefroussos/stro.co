@@ -18,7 +18,6 @@ const CardPreview = ({ active, project, onClick }: Props) => {
         alt={`${project.id} hero`}
         width={1280}
         height={620}
-        quality={100}
       />
       <div className={active ? 'description card-active' : 'description'}>
         <div>

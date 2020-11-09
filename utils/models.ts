@@ -12,5 +12,12 @@ export interface ProjectModel {
 export interface ProjectBodyModel {
   title: string
   description: string
-  media: Array<string | [string, string]> // Supports a 2x grid
+  media: Array<string | [string, string]> // Supports vimeo and youtube videos using "provider/videoId" schema. The nested array enables 2x grid of images
+}
+
+export interface GoldModel {
+  title: string
+  subtitle: string
+  image: string
+  url: string
 }

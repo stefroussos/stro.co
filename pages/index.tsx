@@ -1,4 +1,4 @@
-import { projects } from 'content'
+import { projects } from 'content/projects'
 import Layout from 'components/Layout'
 import Cards from 'components/Cards'
 

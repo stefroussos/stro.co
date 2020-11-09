@@ -33,13 +33,14 @@ const Media = ({ id, medium }: MediaProps) => {
       </div>
     )
   }
+
   // Render video
   if (medium.includes('vimeo/') || medium.includes('youtube/')) {
     const [provider, videoId] = medium.split('/');
     const src = provider === 'youtube' ? `https://www.youtube.com/embed/${videoId}?rel=0` : `https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0`
     
     return (
-      <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+      <div style={{ position: 'relative', paddingTop: '56.25%', background: "rgb(0 0 0 / 0.8)" }}>
         <iframe 
           style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
           title={provider} 
@@ -50,11 +51,12 @@ const Media = ({ id, medium }: MediaProps) => {
       </div>
     )
   }
+  
   // Render full size image
   return  (
     <Zoom>
       <img
-        style={{ width: '100%', marginBottom: '10px' }}
+        style={{ width: '100%', marginBottom: '15px' }}
         src={`/images/${id}/${medium}`} 
         alt={medium}
       />

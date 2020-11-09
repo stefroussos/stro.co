@@ -31,8 +31,11 @@ const Header = ({ subtitle }: Props) => {
         <Link href="/about">
           <a className={isPageActive('about')}>About</a>
         </Link>
+        <Link href="/gold">
+          <a className={isPageActive('gold')}>Gold</a>
+        </Link>
         <a className="inactive" href="https://alburn.co/?ref=stro" target="_blank" rel="noopener noreferrer">
-          Alburn Studio
+          Alburn
         </a>
       </nav>
       <style jsx>{styles}</style>
@@ -59,7 +62,7 @@ const styles = css`
     opacity: 0.7;
   }
 
-  a {
+  header a {
     color: #FFF !important;
     margin-left: 15px;
   }
@@ -99,12 +102,11 @@ const styles = css`
       padding: 0 20px;
     }
 
-    a {
+    header a {
       margin: 0 20px 0 0;
       color: #FFF !important
     }
   }
 `
-
 
 export default Header

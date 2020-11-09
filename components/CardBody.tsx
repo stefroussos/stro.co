@@ -31,7 +31,7 @@ const styles = css`
   }
 
   .card-body-description {
-    padding: 5px 0 20px 0;
+    padding: 5px 0 15px 0;
   }
 `
 

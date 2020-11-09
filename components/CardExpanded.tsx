@@ -22,12 +22,11 @@ const CardExpanded = ({ project }: Props) => {
         <div><strong>Date: </strong>{project.date}</div>
       </summary>
       <div className="card-expanded-description">
-        <ReactMarkdown 
-          source={project.description}
-          linkTarget={() => "_blank"}
-        />
+        <ReactMarkdown source={project.description} linkTarget={() => "_blank"} />
       </div>
-      {project.body.map((content, index) => <CardBody key={project.id + index} content={content} id={project.id}/>)}
+      {project.body.map((content, index) => (
+        <CardBody key={project.id + index} content={content} id={project.id}/>
+      ))}
       <div className="arrow-up">
         <MdVerticalAlignTop size="28" className="pointer" onClick={() => handleUpClick()} />
       </div>
@@ -42,7 +41,11 @@ const styles = css`
   }
 
   summary {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+  }
+
+  summary div {
+    padding-bottom: 5px;
   }
 
   .card-expanded-description {
@@ -61,4 +64,5 @@ const styles = css`
     }
   }
 `
+
 export default CardExpanded

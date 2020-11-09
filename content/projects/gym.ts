@@ -11,7 +11,7 @@ const gym: ProjectModel = {
   body: [
     {
       title: "How it Works",
-      description: "A condensed user journey from signup to the first workout.",
+      description: "A condensed user journey from sign up to the first workout.",
       media: ["how_it_works.jpg"]
     },
     {

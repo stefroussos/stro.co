@@ -7,7 +7,7 @@ const springwood: ProjectModel = {
   subtitle: "Digital Design & Full Stack Development",
   type: "Healthcare Startup",
   date: "2017 - 2020",
-  description: "Personal health records are often difficult to access, manage and interpret for patients, that's why I founded Springwood. Its a cross-platform application that enables patients to easily consolidate their records and engage with their medical data. In a matter of minutes, patients can digitise their records and watch them transform from raw data into a refined rendering of their health, that’s intuitive, aggregated and contextual.",
+  description: "Personal health records are often difficult to access, manage and interpret for patients, that's why I founded Springwood. It's a cross-platform application that enables patients to easily consolidate their records and engage with their medical data. In a matter of minutes, patients can digitise their records and watch them transform from raw data into a refined rendering of their health, that’s intuitive, aggregated and contextual.",
   body: [
     {
       title: "Springwood Film",

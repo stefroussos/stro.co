@@ -32,7 +32,6 @@ const Card = ({ active, project, onClick }: Props) => {
   )
 }
 
-
 const styles = css`
   .card {
     color: var(--text);
@@ -44,18 +43,6 @@ const styles = css`
 
   .card-expanded {
     margin: 10px 0 0 0 !important;
-  }
-
-  .pointer {
-    cursor: pointer;
-  }
-
-  .card-c {
-    padding: 0px 80px;
-  }
-
-  p {
-    padding: 10px 0px 80px 0px;
   }
 
   @media screen and (max-width: 1000px) {

@@ -7,13 +7,13 @@ const Footer = () => {
     <footer>
       <p>© {new Date().getFullYear()} Stef Roussos</p>
       <div className="social-icons">
-        <a href="https://www.linkedin.com/in/stef-roussos/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/stef-roussos/" aria-label="Linkedin" target="_blank" rel="noopener noreferrer">
           <IoLogoLinkedin size="20" />
         </a>
-        <a href="https://vimeo.com/user39048142" target="_blank" rel="noopener noreferrer">
+        <a href="https://vimeo.com/user39048142" aria-label="Vimeo" target="_blank" rel="noopener noreferrer">
           <IoLogoVimeo size="20" />
         </a>
-        <a href="https://github.com/stefroussos" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/stefroussos" aria-label="Github" target="_blank" rel="noopener noreferrer">
           <IoLogoGithub size="20" />
         </a>
       </div>

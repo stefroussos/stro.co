@@ -19,7 +19,7 @@ const Cards = ({ projects, activeProjectId = '' }: Props) => {
   function handleCardClick(id: string) {
     setActiveId(id)
     const url = id === '' ? '/' : `/projects/${id}`
-    // Using pushState instead of router.push() so that the page doesn't rerender
+    // Using pushState instead of Next's router.push() so that the page doesn't rerender
     window.history.pushState(id, '', url)
   }
 

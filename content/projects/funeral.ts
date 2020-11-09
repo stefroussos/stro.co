@@ -20,7 +20,7 @@ const funeral: ProjectModel = {
     },
     {
       title: "Funeral Ceremony & 'The Vessel'",
-      description: "A photomontage of how a Pretium funeral ceremony could look like. ‘The Vessel’ is a ceremonial coffin that floats in the memorial garden’s pond (more info below) during a funeral service.",
+      description: "A photo montage of how a Pretium funeral ceremony could look like. ‘The Vessel’ is a ceremonial coffin that floats in the memorial garden’s pond (more info below) during a funeral service.",
       media: ["funeral_service.jpg"]
     },
     {

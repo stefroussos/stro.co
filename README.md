@@ -2,7 +2,7 @@
 This project was build using [NextJS](https://nextjs.org/) and Typescript.
 
 ## NextJS 
-* Instal: `npm install`
+* Install: `npm install`
 * Run: `npm run dev`
 * Build: `npm run build` 
 * Deploy: Push to `main` (since the [Vercel](https://vercel.com/) handles the CI/CD)

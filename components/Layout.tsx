@@ -30,6 +30,16 @@ const Layout = ({ children, title, subtitle, description, image }: Props) => {
     <>
       <Head>
         <html lang="en" />
+        {/* Panelbear Analytics */}
+        <script async src="https://cdn.panelbear.com/analytics.js?site=B8a0rYxh5kW"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.panelbear = window.panelbear || function(){ window.panelbearQ = window.panelbearQ || []; panelbearQ.push(arguments); };
+              panelbear('config', { site: 'B8a0rYxh5kW' });
+            `
+          }}
+        />
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78363147-1" />
         <script

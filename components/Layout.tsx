@@ -32,29 +32,10 @@ const Layout = ({ children, title, subtitle, description, image }: Props) => {
         <html lang="en" />
         {/* Panelbear Analytics */}
         <script async src="https://cdn.panelbear.com/analytics.js?site=B8a0rYxh5kW"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.panelbear = window.panelbear || function(){ window.panelbearQ = window.panelbearQ || []; panelbearQ.push(arguments); };
-              panelbear('config', { site: 'B8a0rYxh5kW' });
-            `
+        <script dangerouslySetInnerHTML={{
+            __html: `window.panelbear=window.panelbear||function(){window.panelbearQ=window.panelbearQ||[],panelbearQ.push(arguments)},panelbear("config",{site:"B8a0rYxh5kW"});`
           }}
         />
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78363147-1" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'UA-78363147-1');
-            `
-          }}
-        />
-        {/* Metomic Consent Manager */}
-        <script src="https://config.metomic.io/config.js?id=prj:ca129418-bfe8-4468-949e-b81262b01394" charSet="utf-8" />
-        <script src="https://consent-manager.metomic.io/embed.js" charSet="utf-8" />
         <title>{OGTitle}</title>
         <meta name="description" content={OGDescription} />
         <meta charSet="utf-8" />

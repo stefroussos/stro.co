@@ -29,7 +29,6 @@ const Layout = ({ children, title, subtitle, description, image }: Props) => {
   return (
     <>
       <Head>
-        <html lang="en" />
         {/* Panelbear Analytics */}
         <script async src="https://cdn.panelbear.com/analytics.js?site=B8a0rYxh5kW"></script>
         <script dangerouslySetInnerHTML={{

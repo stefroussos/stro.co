@@ -7,8 +7,8 @@ import Layout from "components/Layout";
 const AboutPage = () => (
   <Layout
     title="About"
-    subtitle="Bio"
-    description="I’m a designer and developer passionate about technology, startups, healthcare and environmentalism."
+    subtitle="My bio"
+    description="I’m a designer and software developer passionate about technology, startups, healthcare, film and environmentalism."
     image="/images/about/hero.jpg"
   >
     <section>

@@ -1,5 +1,5 @@
 # Stro Portfolio
-This project was build using [NextJS](https://nextjs.org/) and Typescript.
+This project was build using [NextJS](https://nextjs.org/) with Typescript.
 
 ## NextJS 
 * Install: `npm install`
@@ -10,13 +10,13 @@ This project was build using [NextJS](https://nextjs.org/) and Typescript.
 
 ## Guide
 1. Add a new project to `content/projects/PROJECT_NAME.ts`
-2. Create a new object and type check it using the `ProjectModel`
-3. Compress the project images on [TinyJPG](https://tinyjpg.com/)
-4. Add the images to `public/images/PROJECT_NAME/`
+2. Create a new content object and type check it using the `ProjectModel`
+3. Create a hero image (2560 * 1240)
+4. Compress the project images on [TinyJPG](https://tinyjpg.com/) or [Image Compressor](https://imagecompressor.com/)
+5. Add the images to `public/images/PROJECT_NAME/`
 
 
 ## Todos
 * Full implementation of `next/image`
 * Add Tests
-* Gold: Use sketches instead of images. Create OG Image
 * CMS (on Prismic or similar provider)

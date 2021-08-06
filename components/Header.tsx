@@ -43,7 +43,9 @@ const Header = ({ subtitle }: Props) => {
           rel="noopener noreferrer"
         >
           Alburn
-          <RiExternalLinkLine />
+          <RiExternalLinkLine 
+            style={{position: "relative", bottom: -2, marginLeft: 5}}
+          />
         </a>
       </nav>
       <style jsx>{styles}</style>
@@ -60,6 +62,11 @@ const styles = css`
     padding: 40px 50px 10px 50px;
   }
 
+  header a {
+    color: #fff !important;
+    margin-left: 15px;
+  }
+
   .title {
     font-size: 18px;
     font-weight: 600;
@@ -70,11 +77,6 @@ const styles = css`
     opacity: 0.7;
   }
 
-  header a {
-    color: #fff !important;
-    margin-left: 15px;
-  }
-
   .active {
     opacity: 1;
   }
@@ -82,7 +84,7 @@ const styles = css`
   .inactive {
     opacity: 0.5;
   }
-
+  
   @media screen and (max-width: 1000px) {
     header {
       flex-direction: column-reverse;

@@ -14,7 +14,10 @@ const CardPreview = ({ active, project, onClick }: Props) => {
   return (
     <div className={active ? '' : 'pointer'}>
       <Image 
+        priority
+        placeholder="blur"
         src={`/images/${project.id}/${project.image}`}
+        blurDataURL={`/images/${project.id}/${project.image}`}
         alt={`${project.id} hero`}
         width={1280}
         height={620}

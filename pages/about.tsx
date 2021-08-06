@@ -15,7 +15,10 @@ const AboutPage = () => (
     <section>
       <div className="about-container">
         <Image 
+          priority
+          placeholder="blur"
           src={`/images/about/${about.image}`}
+          blurDataURL={`/images/about/${about.image}`}
           alt={`about`}
           width={1280}
           height={620}

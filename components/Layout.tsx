@@ -1,38 +1,45 @@
-import { ReactNode } from 'react'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import Header from './Header'
-import Footer from './Footer'
-import styles from 'styles/global'
-
+import { ReactNode } from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import Header from "./Header";
+import Footer from "./Footer";
+import styles from "styles/global";
 
 interface Props {
-  children?: ReactNode
-  title?: string
-  subtitle?: string
-  description?: string
-  image?: string
+  children?: ReactNode;
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  image?: string;
 }
 
 const Layout = ({ children, title, subtitle, description, image }: Props) => {
-  const path = useRouter().asPath
-  const defaultTitle = 'Stef Roussos'
-  const defaultDescription = 'A collection of my design, technology and film projects.'
-  const defaultURL = 'https://stro.co'
-  const defaultSubtitle = subtitle === undefined ? defaultDescription : subtitle
-  const defaultImage = defaultURL + '/images/springwood/hero.jpg'
-  const OGTitle = title === undefined ? defaultTitle : `${defaultTitle} | ${title}`
-  const OGDescription = description === undefined ? defaultDescription : description
-  const OGURL = defaultURL + path
-  const OGImage = image === undefined ? defaultImage : defaultURL + image
-  
+  const path = useRouter().asPath;
+  const defaultTitle = "Stef Roussos";
+  const defaultDescription =
+    "A collection of my design, technology and film projects.";
+  const defaultURL = "https://stro.co";
+  const defaultSubtitle =
+    subtitle === undefined ? defaultDescription : subtitle;
+  const defaultImage = defaultURL + "/images/springwood/hero.jpg";
+  const OGTitle =
+    title === undefined ? defaultTitle : `${defaultTitle} | ${title}`;
+  const OGDescription =
+    description === undefined ? defaultDescription : description;
+  const OGURL = defaultURL + path;
+  const OGImage = image === undefined ? defaultImage : defaultURL + image;
+
   return (
     <>
       <Head>
         {/* Panelbear Analytics */}
-        <script async src="https://cdn.panelbear.com/analytics.js?site=B8a0rYxh5kW"></script>
-        <script dangerouslySetInnerHTML={{
-            __html: `window.panelbear=window.panelbear||function(){window.panelbearQ=window.panelbearQ||[],panelbearQ.push(arguments)},panelbear("config",{site:"B8a0rYxh5kW"});`
+        <script
+          async
+          src="https://cdn.panelbear.com/analytics.js?site=B8a0rYxh5kW"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.panelbear=window.panelbear||function(){window.panelbearQ=window.panelbearQ||[],panelbearQ.push(arguments)},panelbear("config",{site:"B8a0rYxh5kW"});`,
           }}
         />
         <title>{OGTitle}</title>
@@ -46,19 +53,38 @@ const Layout = ({ children, title, subtitle, description, image }: Props) => {
         <meta name="twitter:site" content={OGURL} />
         <meta name="twitter:image" content={OGImage} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
       </Head>
       <main>
         <Header subtitle={defaultSubtitle} />
         {children}
         <Footer />
       </main>
-      <style jsx global>{styles}</style>
+      <style jsx global>
+        {styles}
+      </style>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

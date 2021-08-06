@@ -1,20 +1,22 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import css from 'styled-jsx/css'
-
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { RiExternalLinkLine } from "react-icons/ri";
+import css from "styled-jsx/css";
 
 interface Props {
-  subtitle: string
+  subtitle: string;
 }
 
 const Header = ({ subtitle }: Props) => {
-  const { pathname } = useRouter()
+  const { pathname } = useRouter();
 
   function isPageActive(page: string) {
-    if (page === 'index') {
-      return pathname.includes('projects') || pathname === '/' ? 'active' : 'inactive'
+    if (page === "index") {
+      return pathname.includes("projects") || pathname === "/"
+        ? "active"
+        : "inactive";
     } else {
-      return pathname.includes(page) ? 'active' : 'inactive'
+      return pathname.includes(page) ? "active" : "inactive";
     }
   }
 
@@ -26,22 +28,28 @@ const Header = ({ subtitle }: Props) => {
       </div>
       <nav>
         <Link href="/">
-          <a className={isPageActive('index')}>Projects</a>
+          <a className={isPageActive("index")}>Projects</a>
         </Link>
         <Link href="/about">
-          <a className={isPageActive('about')}>About</a>
+          <a className={isPageActive("about")}>About</a>
         </Link>
-        <Link href="/gold">
+        {/* <Link href="/gold">
           <a className={isPageActive('gold')}>Gold</a>
-        </Link>
-        <a className="inactive" href="https://alburn.co/?ref=stro" target="_blank" rel="noopener noreferrer">
+        </Link> */}
+        <a
+          className="inactive"
+          href="https://alburn.co/?ref=stro"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Alburn
+          <RiExternalLinkLine />
         </a>
       </nav>
       <style jsx>{styles}</style>
     </header>
-  )
-}
+  );
+};
 
 const styles = css`
   header {
@@ -63,7 +71,7 @@ const styles = css`
   }
 
   header a {
-    color: #FFF !important;
+    color: #fff !important;
     margin-left: 15px;
   }
 
@@ -90,7 +98,7 @@ const styles = css`
       margin-bottom: 15px;
       padding: 15px 20px;
       background: #222222;
-      box-shadow: 0 3px 10px 0 rgba(0,0,0,0.4);
+      box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
     }
 
     .title {
@@ -104,9 +112,9 @@ const styles = css`
 
     header a {
       margin: 0 20px 0 0;
-      color: #FFF !important
+      color: #fff !important;
     }
   }
-`
+`;
 
-export default Header
+export default Header;

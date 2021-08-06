@@ -1,11 +1,11 @@
-import css from 'styled-jsx/css'
+import css from "styled-jsx/css";
 
 const styles = css.global`
-  :root { 
+  :root {
     --text: #333;
-    --blue: #0064D8;
+    --blue: #0064d8;
     --background: #111112;
-    --ease-in-out: all .2s ease-in-out;
+    --ease-in-out: all 0.2s ease-in-out;
   }
 
   * {
@@ -18,19 +18,20 @@ const styles = css.global`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  html, body {
-    font-family: 'Open Sans',  Helvetica, -apple-system, sans-serif;
+  html,
+  body {
+    font-family: "Open Sans", Helvetica, -apple-system, sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 150%;
     background: var(--background);
-    color: #FFF;
+    color: #fff;
   }
 
   main {
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
   }
 
   section {
@@ -55,15 +56,15 @@ const styles = css.global`
     font-weight: 600;
   }
 
-  a { 
+  a {
     text-decoration: none;
     font-weight: 600;
     color: var(--blue);
     cursor: pointer;
   }
 
-  a:visited { 
-    color: var(--blue); 
+  a:visited {
+    color: var(--blue);
   }
 
   .pointer {
@@ -75,8 +76,12 @@ const styles = css.global`
   }
 
   @keyframes fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @media screen and (max-width: 1000px) {
@@ -98,6 +103,6 @@ const styles = css.global`
       font-size: 14px;
     }
   }
-`
+`;
 
-export default styles
+export default styles;

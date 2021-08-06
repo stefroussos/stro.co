@@ -1,19 +1,18 @@
-import Image from 'next/image'
-import css from 'styled-jsx/css'
-import { MdArrowDownward, MdClose } from 'react-icons/md';
-import { ProjectModel } from 'utils/models'
-
+import Image from "next/image";
+import css from "styled-jsx/css";
+import { MdArrowDownward, MdClose } from "react-icons/md";
+import { ProjectModel } from "utils/models";
 
 interface Props {
-  active: boolean
-  project: ProjectModel
-  onClick: Function
+  active: boolean;
+  project: ProjectModel;
+  onClick: Function;
 }
 
 const CardPreview = ({ active, project, onClick }: Props) => {
   return (
-    <div className={active ? '' : 'pointer'}>
-      <Image 
+    <div className={active ? "" : "pointer"}>
+      <Image
         priority
         placeholder="blur"
         src={`/images/${project.id}/${project.image}`}
@@ -22,21 +21,21 @@ const CardPreview = ({ active, project, onClick }: Props) => {
         width={1280}
         height={620}
       />
-      <div className={active ? 'description card-active' : 'description'}>
+      <div className={active ? "description card-active" : "description"}>
         <div>
           <h1>{project.title}</h1>
           <h2>{project.subtitle}</h2>
         </div>
         {active ? (
-          <MdClose size="20" className="pointer" onClick={() => onClick('')} />
+          <MdClose size="20" className="pointer" onClick={() => onClick("")} />
         ) : (
-          <MdArrowDownward size="20"  />
+          <MdArrowDownward size="20" />
         )}
       </div>
       <style jsx>{styles}</style>
     </div>
-  )
-}
+  );
+};
 
 const styles = css`
   .description {
@@ -65,6 +64,6 @@ const styles = css`
       padding: 20px 20px;
     }
   }
-`
+`;
 
-export default CardPreview
+export default CardPreview;

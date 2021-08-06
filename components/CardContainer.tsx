@@ -1,44 +1,43 @@
-import { useEffect } from 'react'
-import css from 'styled-jsx/css'
-import { ProjectModel } from 'utils/models'
-import CardPreview from './CardPreview'
-import CardExpanded from './CardExpanded'
-
+import { useEffect } from "react";
+import css from "styled-jsx/css";
+import { ProjectModel } from "utils/models";
+import CardPreview from "./CardPreview";
+import CardExpanded from "./CardExpanded";
 
 interface Props {
-  active: boolean
-  project: ProjectModel
-  onClick: Function
+  active: boolean;
+  project: ProjectModel;
+  onClick: Function;
 }
 
 const Card = ({ active, project, onClick }: Props) => {
   useEffect(() => {
     if (active) {
-      const element = document.getElementById(project.id) as HTMLElement
-      element.scrollIntoView({ behavior: 'smooth' })
+      const element = document.getElementById(project.id) as HTMLElement;
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }, [active, project])
+  }, [active, project]);
 
   return (
-    <div 
+    <div
       id={project.id}
-      className={active ? 'card card-expanded' : 'card'}
+      className={active ? "card card-expanded" : "card"}
       onClick={() => !active && onClick(project.id)}
     >
       <CardPreview active={active} project={project} onClick={onClick} />
       {active && <CardExpanded project={project} />}
       <style jsx>{styles}</style>
     </div>
-  )
-}
+  );
+};
 
 const styles = css`
   .card {
     color: var(--text);
-    background: #FFF;
+    background: #fff;
     margin: 20px 50px;
-    transition: var(--ease-in-out); 
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.4);
+    transition: var(--ease-in-out);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
   }
 
   .card-expanded {
@@ -50,6 +49,6 @@ const styles = css`
       margin: 20px 20px;
     }
   }
-`
+`;
 
-export default Card
+export default Card;

@@ -1,12 +1,11 @@
-import css from 'styled-jsx/css'
-import ReactMarkdown from 'react-markdown'
-import { ProjectBodyModel } from 'utils/models'
-import Media from './Media'
-
+import css from "styled-jsx/css";
+import ReactMarkdown from "react-markdown";
+import { ProjectBodyModel } from "utils/models";
+import Media from "./Media";
 
 interface CardBodyProps {
-  id: string
-  content: ProjectBodyModel
+  id: string;
+  content: ProjectBodyModel;
 }
 
 const CardBody = ({ content, id }: CardBodyProps) => {
@@ -14,16 +13,18 @@ const CardBody = ({ content, id }: CardBodyProps) => {
     <div className="card-body-container">
       <h3>{content.title}</h3>
       <div className="card-body-description">
-        <ReactMarkdown 
+        <ReactMarkdown
           source={content.description}
           linkTarget={() => "_blank"}
         />
       </div>
-      {content.media.map((medium, index) => <Media key={id+index} medium={medium} id={id} />)}
-      <style jsx>{styles}</style> 
+      {content.media.map((medium, index) => (
+        <Media key={id + index} medium={medium} id={id} />
+      ))}
+      <style jsx>{styles}</style>
     </div>
-  )
-}
+  );
+};
 
 const styles = css`
   .card-body-container {
@@ -33,6 +34,6 @@ const styles = css`
   .card-body-description {
     padding: 5px 0 15px 0;
   }
-`
+`;
 
-export default CardBody
+export default CardBody;

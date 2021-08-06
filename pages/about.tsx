@@ -1,20 +1,19 @@
-import Image from 'next/image'
-import css from 'styled-jsx/css'
-import ReactMarkdown from 'react-markdown'
-import about from 'content/about'
-import Layout from 'components/Layout'
-
+import Image from "next/image";
+import css from "styled-jsx/css";
+import ReactMarkdown from "react-markdown";
+import about from "content/about";
+import Layout from "components/Layout";
 
 const AboutPage = () => (
-  <Layout 
-    title="About" 
+  <Layout
+    title="About"
     subtitle="Bio"
-    description="I’m a designer and developer passionate about technology, startups, healthcare and environmentalism." 
+    description="I’m a designer and developer passionate about technology, startups, healthcare and environmentalism."
     image="/images/about/hero.jpg"
   >
     <section>
       <div className="about-container">
-        <Image 
+        <Image
           priority
           placeholder="blur"
           src={`/images/about/${about.image}`}
@@ -24,20 +23,23 @@ const AboutPage = () => (
           height={620}
         />
         <div className="about-content">
-          <ReactMarkdown source={about.description} linkTarget={() => "_blank"}  />
+          <ReactMarkdown
+            source={about.description}
+            linkTarget={() => "_blank"}
+          />
         </div>
       </div>
     </section>
-    <style jsx>{styles}</style> 
+    <style jsx>{styles}</style>
   </Layout>
-)
+);
 
 const styles = css`
   .about-container {
     color: var(--text);
-    background: #FFF;
+    background: #fff;
     margin: 20px 50px 0 50px;
-    transition: var(--ease-in-out); 
+    transition: var(--ease-in-out);
   }
 
   .about-content {
@@ -53,6 +55,6 @@ const styles = css`
       padding: 20px 20px 30px 20px;
     }
   }
-`
+`;
 
-export default AboutPage
+export default AboutPage;

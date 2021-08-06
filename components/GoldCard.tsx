@@ -1,14 +1,18 @@
-import css from 'styled-jsx/css'
-import { GoldModel } from 'utils/models'
-
+import css from "styled-jsx/css";
+import { GoldModel } from "utils/models";
 
 interface Props {
-  card: GoldModel
+  card: GoldModel;
 }
 
 const GoldCard = ({ card }: Props) => {
   return (
-    <a className="gold-card" href={card.url} target="_blank" rel="noopener noreferrer">
+    <a
+      className="gold-card"
+      href={card.url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img src={`/images/gold/${card.image}`} />
       <div className="gold-content">
         <div>
@@ -16,19 +20,18 @@ const GoldCard = ({ card }: Props) => {
           <p>{card.subtitle}</p>
         </div>
         <div className="gold-url">{card.url}</div>
-        
       </div>
-      <style jsx>{cardStyles}</style> 
+      <style jsx>{cardStyles}</style>
     </a>
-  )
-}
+  );
+};
 
 const cardStyles = css`
   .gold-card {
     align-items: center;
     width: 215px;
     margin: 0 10px 10px 0px;
-    background: #FFF;
+    background: #fff;
     color: var(--text);
   }
 
@@ -67,6 +70,6 @@ const cardStyles = css`
       min-width: 100%;
     }
   }
-`
+`;
 
-export default GoldCard
+export default GoldCard;

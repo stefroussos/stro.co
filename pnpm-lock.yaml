@@ -13,7 +13,7 @@ specifiers:
   react-icons: ^3.11.0
   react-markdown: ^5.0.2
   react-medium-image-zoom: ^4.3.1
-  typescript: '4.0'
+  typescript: 4.9.4
 
 dependencies:
   framer-motion: 2.9.5_biqbaboplfbrettd7655fr4n2y
@@ -30,7 +30,7 @@ devDependencies:
   '@types/react-dom': 16.9.17
   '@types/styled-jsx': 2.2.9
   prettier: 2.8.1
-  typescript: 4.0.8
+  typescript: 4.9.4
 
 packages:
 
@@ -649,8 +649,8 @@ packages:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
     dev: false
 
-  /typescript/4.0.8:
-    resolution: {integrity: sha512-oz1765PN+imfz1MlZzSZPtC/tqcwsCyIYA8L47EkRnRW97ztRk83SzMiWLrnChC0vqoYxSU1fcFUDA5gV/ZiPg==}
+  /typescript/4.9.4:
+    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true

@@ -38,6 +38,7 @@ const Header = ({ subtitle }: Props) => {
           href="/about"
           style={{
             color: `rgb(255, 255, 255, ${isPageActive("about") ? 1 : 0.5})`,
+            marginRight: 15,
           }}
         >
           About

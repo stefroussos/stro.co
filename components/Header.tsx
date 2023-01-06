@@ -12,11 +12,9 @@ const Header = ({ subtitle }: Props) => {
 
   function isPageActive(page: string) {
     if (page === "index") {
-      return pathname.includes("projects") || pathname === "/"
-        ? "active"
-        : "inactive";
+      return pathname.includes("projects") || pathname === "/" ? true : false;
     } else {
-      return pathname.includes(page) ? "active" : "inactive";
+      return pathname.includes(page) ? true : false;
     }
   }
 
@@ -27,11 +25,22 @@ const Header = ({ subtitle }: Props) => {
         <div className="subtitle">{subtitle}</div>
       </div>
       <nav>
-        <Link href="/">
-          <a className={isPageActive("index")}>Projects</a>
+        <Link
+          href="/"
+          style={{
+            color: `rgb(255, 255, 255, ${isPageActive("index") ? 1 : 0.5})`,
+            marginRight: 15,
+          }}
+        >
+          Projects
         </Link>
-        <Link href="/about">
-          <a className={isPageActive("about")}>About</a>
+        <Link
+          href="/about"
+          style={{
+            color: `rgb(255, 255, 255, ${isPageActive("about") ? 1 : 0.5})`,
+          }}
+        >
+          About
         </Link>
         {/* <Link href="/gold">
           <a className={isPageActive('gold')}>Gold</a>
@@ -43,8 +52,8 @@ const Header = ({ subtitle }: Props) => {
           rel="noopener noreferrer"
         >
           Alburn
-          <RiExternalLinkLine 
-            style={{position: "relative", bottom: -2, marginLeft: 5}}
+          <RiExternalLinkLine
+            style={{ position: "relative", bottom: -2, marginLeft: 5 }}
           />
         </a>
       </nav>
@@ -77,14 +86,10 @@ const styles = css`
     opacity: 0.7;
   }
 
-  .active {
-    opacity: 1;
-  }
-
   .inactive {
     opacity: 0.5;
   }
-  
+
   @media screen and (max-width: 1000px) {
     header {
       flex-direction: column-reverse;

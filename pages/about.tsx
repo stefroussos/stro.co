@@ -19,6 +19,7 @@ const AboutPage = () => (
           src={`/images/about/${about.image}`}
           blurDataURL={`/images/about/${about.image}`}
           alt={`about`}
+          style={{ width: "100%", height: "auto" }}
           width={1280}
           height={620}
         />

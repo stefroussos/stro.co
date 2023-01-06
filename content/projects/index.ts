@@ -1,3 +1,5 @@
+import optyfi from "./optyfi";
+import hidn from "./hidn";
 import springwood from "./springwood";
 import bitcoin from "./bitcoin";
 import blocks from "./blocks";
@@ -8,6 +10,8 @@ import films from "./films";
 import costakis from "./costakis";
 
 export const projects = [
+  optyfi,
+  hidn,
   springwood,
   bitcoin,
   costakis,

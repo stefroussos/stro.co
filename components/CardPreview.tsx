@@ -18,6 +18,7 @@ const CardPreview = ({ active, project, onClick }: Props) => {
         src={`/images/${project.id}/${project.image}`}
         blurDataURL={`/images/${project.id}/${project.image}`}
         alt={`${project.id} hero`}
+        style={{ width: "100%", height: "auto" }}
         width={1280}
         height={620}
       />

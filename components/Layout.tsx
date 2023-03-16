@@ -32,16 +32,6 @@ const Layout = ({ children, title, subtitle, description, image }: Props) => {
   return (
     <>
       <Head>
-        {/* Panelbear Analytics */}
-        <script
-          async
-          src="https://cdn.panelbear.com/analytics.js?site=B8a0rYxh5kW"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.panelbear=window.panelbear||function(){window.panelbearQ=window.panelbearQ||[],panelbearQ.push(arguments)},panelbear("config",{site:"B8a0rYxh5kW"});`,
-          }}
-        />
         <title>{OGTitle}</title>
         <meta name="description" content={OGDescription} />
         <meta charSet="utf-8" />

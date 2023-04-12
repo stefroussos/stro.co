@@ -44,10 +44,6 @@ const Layout = ({ children, title, subtitle, description, image }: Props) => {
         <meta name="twitter:image" content={OGImage} />
         <meta name="twitter:card" content="summary_large_image" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
-        <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/apple-touch-icon.png"

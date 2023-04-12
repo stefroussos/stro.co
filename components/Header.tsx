@@ -28,7 +28,7 @@ const Header = ({ subtitle }: Props) => {
         <Link
           href="/"
           style={{
-            color: `rgb(255, 255, 255, ${isPageActive("index") ? 1 : 0.5})`,
+            color: `rgba(255, 255, 255, ${isPageActive("index") ? 1 : 0.5})`,
             marginRight: 15,
           }}
         >
@@ -37,17 +37,24 @@ const Header = ({ subtitle }: Props) => {
         <Link
           href="/about"
           style={{
-            color: `rgb(255, 255, 255, ${isPageActive("about") ? 1 : 0.5})`,
+            color: `rgba(255, 255, 255, ${isPageActive("about") ? 1 : 0.5})`,
             marginRight: 15,
           }}
         >
           About
         </Link>
-        {/* <Link href="/gold">
-          <a className={isPageActive('gold')}>Gold</a>
+        {/* <Link
+          href="/gold"
+          style={{
+            color: `rgba(255, 255, 255, ${isPageActive("about") ? 1 : 0.5})`,
+            marginRight: 15,
+          }}
+        >
+          Gold
         </Link> */}
-        <a
+        <Link
           className="inactive"
+          style={{ color: "rgba(255, 255, 255, 0.5)" }}
           href="https://alburn.co/?ref=stro"
           target="_blank"
           rel="noopener noreferrer"
@@ -56,7 +63,7 @@ const Header = ({ subtitle }: Props) => {
           <RiExternalLinkLine
             style={{ position: "relative", bottom: -2, marginLeft: 5 }}
           />
-        </a>
+        </Link>
       </nav>
       <style jsx>{styles}</style>
     </header>
@@ -70,11 +77,6 @@ const styles = css`
     justify-content: space-between;
     width: 1000px;
     padding: 40px 50px 10px 50px;
-  }
-
-  header a {
-    color: #fff !important;
-    margin-left: 15px;
   }
 
   .title {

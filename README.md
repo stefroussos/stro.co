@@ -7,6 +7,9 @@ This project was build using [NextJS](https://nextjs.org/) with Typescript.
 * Build: `npm run build` 
 * Deploy: Push to `main` (since the [Vercel](https://vercel.com/) handles the CI/CD)
 
+### Performance
+![pagespeed insights desktop](/public/other/pagespeed-insights-desktop.png)
+![pagespeed insights mobile](/public/other/pagespeed-insights-mobile.png)
 
 ## Guide
 1. Add a new project to `content/projects/PROJECT_NAME.ts`
